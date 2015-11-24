@@ -1,0 +1,20 @@
+application: chroniclecompare
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /prefs
+  script: prefs.app
+  login: required
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
+- name: markupsafe
+  version: latest
